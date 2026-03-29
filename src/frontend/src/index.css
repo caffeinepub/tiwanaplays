@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 100% 4%;
+    --foreground: 210 100% 94%;
+    --card: 214 80% 10%;
+    --card-foreground: 210 100% 94%;
+    --popover: 214 80% 10%;
+    --popover-foreground: 210 100% 94%;
+    --primary: 177 79% 49%;
+    --primary-foreground: 222 100% 4%;
+    --secondary: 214 70% 13%;
+    --secondary-foreground: 210 100% 94%;
+    --muted: 214 50% 18%;
+    --muted-foreground: 210 30% 67%;
+    --accent: 207 100% 57%;
+    --accent-foreground: 222 100% 4%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 205 66% 20%;
+    --input: 214 80% 10%;
+    --ring: 177 79% 49%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(180deg, #050a14 0%, #071427 50%, #0a1c33 100%);
+    min-height: 100vh;
+  }
+}
+
+/* Grid pattern overlay */
+.grid-bg {
+  background-image: linear-gradient(
+      rgba(23, 227, 214, 0.04) 1px,
+      transparent 1px
+    ), linear-gradient(90deg, rgba(23, 227, 214, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Neon glow effects */
+.neon-glow {
+  box-shadow: 0 0 8px #17e3d6, 0 0 20px rgba(23, 227, 214, 0.3);
+}
+
+.neon-glow-strong {
+  box-shadow: 0 0 12px #17e3d6, 0 0 30px rgba(23, 227, 214, 0.5), 0 0 60px
+    rgba(23, 227, 214, 0.2);
+}
+
+.neon-text {
+  text-shadow: 0 0 10px #17e3d6, 0 0 20px rgba(23, 227, 214, 0.6);
+}
+
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 0 16px #17e3d6, 0 0 40px rgba(23, 227, 214, 0.4);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050a14;
+}
+::-webkit-scrollbar-thumb {
+  background: #17e3d6;
+  border-radius: 3px;
+}
